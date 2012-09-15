@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @share.user_id %>
+</p>
+
+<p>
+  <b>Resource:</b>
+  <%= @share.resource_id %>
+</p>
+
+<p>
+  <b>Group:</b>
+  <%= @share.group_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_share_path(@share) %> |
+<%= link_to 'Back', shares_path %>

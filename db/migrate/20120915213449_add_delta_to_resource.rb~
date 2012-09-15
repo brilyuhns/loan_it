@@ -1,0 +1,4 @@
+class AddDeltaToResource < ActiveRecord::Migration
+  def change
+  end
+end

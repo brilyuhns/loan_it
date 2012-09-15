@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @resource.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @resource.description %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @resource.category_id %>
+</p>
+
+<p>
+  <b>Owner:</b>
+  <%= @resource.owner_id %>
+</p>
+
+<p>
+  <b>Publicly searchable:</b>
+  <%= @resource.publicly_searchable %>
+</p>
+
+<p>
+  <b>Owner groups searchable:</b>
+  <%= @resource.owner_groups_searchable %>
+</p>
+
+<p>
+  <b>Available:</b>
+  <%= @resource.available %>
+</p>
+
+
+<%= link_to 'Edit', edit_resource_path(@resource) %> |
+<%= link_to 'Back', resources_path %>

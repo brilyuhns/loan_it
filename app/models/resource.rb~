@@ -1,0 +1,15 @@
+class Resource < ActiveRecord::Base
+  attr_accessible :available, :category_id, :description, :name, :owner_groups_searchable, :owner_id, :publicly_searchable
+
+  has_many :shares
+  has_many :shared_groups, :through => :shares, :source => :group
+
+  define_index do
+    indexes :name
+    indexes description
+
+    has shared_groups(:id), :as => :shared_group_ids
+    has :publicly_searchable
+  end
+
+end

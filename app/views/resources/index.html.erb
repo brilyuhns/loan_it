@@ -1,0 +1,35 @@
+<h1>Listing resources</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th>Owner</th>
+    <th>Publicly searchable</th>
+    <th>Owner groups searchable</th>
+    <th>Available</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @resources.each do |resource| %>
+  <tr>
+    <td><%= resource.name %></td>
+    <td><%= resource.description %></td>
+    <td><%= resource.category_id %></td>
+    <td><%= resource.owner_id %></td>
+    <td><%= resource.publicly_searchable %></td>
+    <td><%= resource.owner_groups_searchable %></td>
+    <td><%= resource.available %></td>
+    <td><%= link_to 'Show', resource %></td>
+    <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
+    <td><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Resource', new_resource_path %>

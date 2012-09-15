@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  category_id: 1
+  owner_id: 1
+  publicly_searchable: 
+  owner_groups_searchable: false
+  available: false
+
+two:
+  name: MyString
+  description: MyText
+  category_id: 1
+  owner_id: 1
+  publicly_searchable: 
+  owner_groups_searchable: false
+  available: false

@@ -1,0 +1,7 @@
+development:
+  adapter: mysql2
+  database: loan_it
+  username: root
+  password: abc123
+  pool: 5
+
