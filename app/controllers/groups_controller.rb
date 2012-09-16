@@ -2,8 +2,12 @@ class GroupsController < ApplicationController
   # GET /groups
   # GET /groups.json
   def index
-    @groups = Group.all
-
+    @current_user = current_user
+    if params[:mine]
+      @groups = Group.where(:owner_id => @current_user.id)
+    else
+      @groups = Group.all
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @groups }
