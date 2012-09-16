@@ -1,0 +1,11 @@
+%h1
+  Login
+
+%br/
+
+= form_tag(sessions_path) do
+  %label
+    Email :
+    %input{:type => :text, :name => :email}
+  %button
+    Login

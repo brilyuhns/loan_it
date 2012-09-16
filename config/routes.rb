@@ -11,6 +11,11 @@ LoanIt::Application.routes.draw do
 
   resources :users
 
+  resources :sessions
+  
+  match '/login', :to => "sessions#new", :as => :login
+  match '/logout', :to => "sessions#destroy", :as => :logout
+  match '/home', :to => "home#search", :as => :home
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
