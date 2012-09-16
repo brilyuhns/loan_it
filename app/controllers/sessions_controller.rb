@@ -8,13 +8,12 @@ class SessionsController < ApplicationController
   def create
     email = params[:email]
     if email.present?
-      user = User.find_or_create_by_email(email)
-      login_user(user)
+      user = User.find_by_email(email)
+      login_user(user) if user.present?
       redirect_to home_path
     else
       redirect_to login_path
     end
-    Rails.logger.ap User.all
   end
 
   def destroy
